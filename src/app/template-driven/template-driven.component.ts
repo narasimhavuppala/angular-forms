@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDrivenComponent implements OnInit {
 
+  username: String;
+  password: String;
+
   constructor() { }
 
   ngOnInit() {
