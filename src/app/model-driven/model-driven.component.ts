@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-model-driven',
@@ -8,12 +8,20 @@ import { FormControl } from '@angular/forms';
 })
 export class ModelDrivenComponent implements OnInit {
 
-  username: FormControl = new FormControl('');
-  password: FormControl = new FormControl('');
+  loginForm = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl('')
+  });
+
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+
+    console.log(this.loginForm.value);
   }
 
 }

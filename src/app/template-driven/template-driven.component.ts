@@ -15,4 +15,11 @@ export class TemplateDrivenComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+
+
+    console.log(this.username);
+    console.log(this.password);
+  }
+
 }
